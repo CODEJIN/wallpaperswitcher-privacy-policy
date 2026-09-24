@@ -14,11 +14,15 @@
   th { background: #f5f5f5; }
   .lang-block { margin-bottom: 3rem; }
   code { background: #f2f2f2; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .lang-switch { font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .lang-switch a { margin-right: 12px; }
 </style>
 </head>
 <body>
 
-<div class="lang-block" lang="ko">
+<p class="lang-switch"><a href="#ko">한국어</a><a href="#en">English</a></p>
+
+<div class="lang-block" id="ko" lang="ko">
 <h1>WallpaperSwitcher 개인정보처리방침</h1>
 <p class="updated">최종 수정일: 2026-08-22</p>
 
@@ -84,7 +88,7 @@
 
 <hr/>
 
-<div class="lang-block" lang="en">
+<div class="lang-block" id="en" lang="en">
 <h1>WallpaperSwitcher Privacy Policy</h1>
 <p class="updated">Last updated: 2026-08-22</p>
 
