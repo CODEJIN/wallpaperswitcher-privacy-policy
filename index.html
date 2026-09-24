@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WallpaperSwitcher 개인정보처리방침 / Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.2rem; margin-top: 2.2rem; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  .updated { color: #666; font-size: 0.9rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; font-size: 0.92rem; vertical-align: top; }
+  th { background: #f5f5f5; }
+  .lang-block { margin-bottom: 3rem; }
+  code { background: #f2f2f2; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<div class="lang-block" lang="ko">
+<h1>WallpaperSwitcher 개인정보처리방침</h1>
+<p class="updated">최종 수정일: 2026-08-22</p>
+
+<p>WallpaperSwitcher(이하 "앱")는 Wi-Fi 연결 상태와 폴더블 기기의 접힘/펼침 상태에 따라
+사용자가 지정한 폴더의 이미지를 배경화면(홈/잠금화면)으로 자동 전환해주는 개인용 유틸리티
+앱입니다. 이 개인정보처리방침은 앱이 접근하는 정보와 그 사용 방식을 설명합니다.</p>
+
+<h2>1. 앱은 서버로 어떤 데이터도 전송하지 않습니다</h2>
+<p>이 앱은 완전히 오프라인으로 동작합니다. 자체 서버, 백엔드, 분석(analytics) SDK, 광고 SDK를
+포함하지 않으며, 앱이 다루는 모든 데이터는 사용자의 기기 안에만 저장되고 외부로 전송되지
+않습니다. 개발자를 포함한 어느 누구도 사용자의 데이터를 원격으로 수집·조회·판매·공유하지
+않습니다.</p>
+
+<h2>2. 앱이 기기에서 접근하는 정보</h2>
+<table>
+<tr><th>권한 / 데이터</th><th>사용 목적</th><th>기기 밖으로 전송되는지</th></tr>
+<tr>
+  <td>위치 권한<br/>(<code>ACCESS_FINE_LOCATION</code>,
+  <code>ACCESS_BACKGROUND_LOCATION</code>,<br/><code>NEARBY_WIFI_DEVICES</code>)</td>
+  <td>Android 운영체제 정책상, 현재 연결된 Wi-Fi의 SSID(네트워크 이름)를 읽으려면 위치 권한이
+  있어야 합니다. 이 앱은 <b>사용자의 실제 위치(GPS 좌표 등)를 조회, 저장, 전송하지 않으며</b>,
+  오직 "지금 연결된 Wi-Fi가 등록해둔 프로필 중 어떤 것과 일치하는지" 판단하는 용도로만
+  이 권한을 사용합니다. 백그라운드 위치 권한은 앱이 화면에 떠 있지 않을 때도 Wi-Fi 전환을
+  감지해 배경화면을 자동으로 바꾸기 위해 필요합니다(앱의 핵심 기능 자체가 자동 전환이므로).</td>
+  <td>전송 안 됨(기기 내에서만 SSID 문자열 비교에 사용, 저장되지 않음)</td>
+</tr>
+<tr>
+  <td>사진/이미지 폴더 접근<br/>(Storage Access Framework, <code>SET_WALLPAPER</code>)</td>
+  <td>사용자가 직접 선택한 폴더 안의 이미지 파일을 읽어 배경화면으로 설정합니다. 사용자가
+  명시적으로 선택하지 않은 폴더나 파일에는 접근하지 않습니다.</td>
+  <td>전송 안 됨(기기 내에서만 처리, 배경화면 설정 API로 바로 전달)</td>
+</tr>
+<tr>
+  <td>Wi-Fi 프로필 목록(SSID), 폴더 경로, 순환 설정, 이벤트 로그, 제외한 이미지 목록</td>
+  <td>이 앱의 핵심 기능(SSID/폴딩 상태별 배경화면 자동 전환)을 위해 기기 안에 저장합니다.</td>
+  <td>전송 안 됨(기기 로컬 저장소에만 저장)</td>
+</tr>
+<tr>
+  <td>정확한 알람 권한(<code>SCHEDULE_EXACT_ALARM</code>), 배터리 최적화 예외</td>
+  <td>Wi-Fi/폴딩 상태 변화를 앱이 백그라운드에 있을 때도 제때 감지해 배경화면을 갱신하기
+  위한 시스템 스케줄링 용도입니다. 개인정보와는 무관합니다.</td>
+  <td>해당 없음</td>
+</tr>
+</table>
+
+<h2>3. 데이터 보관 및 삭제</h2>
+<p>위에서 설명한 모든 데이터는 기기의 앱 전용 저장 공간에만 보관됩니다. 앱을 삭제(제거)하면
+이 데이터도 함께 삭제됩니다. 이벤트 로그와 제외 이미지 목록은 앱 화면 안에서 사용자가
+직접 지우거나 복원할 수 있습니다.</p>
+
+<h2>4. 제3자 제공</h2>
+<p>이 앱은 어떤 데이터도 제3자에게 제공, 판매, 공유하지 않습니다. 광고나 트래킹 SDK를
+포함하지 않습니다.</p>
+
+<h2>5. 아동 대상 여부</h2>
+<p>이 앱은 아동을 주 대상으로 설계되지 않았으며, 아동으로부터 개인정보를 의도적으로
+수집하지 않습니다.</p>
+
+<h2>6. 문의</h2>
+<p>이 개인정보처리방침에 대한 문의는 아래 이메일로 연락해주세요.</p>
+<p><a href="mailto:codejin2@gmail.com">codejin2@gmail.com</a></p>
+</div>
+
+<hr/>
+
+<div class="lang-block" lang="en">
+<h1>WallpaperSwitcher Privacy Policy</h1>
+<p class="updated">Last updated: 2026-08-22</p>
+
+<p>WallpaperSwitcher (the "App") is a personal utility app that automatically switches the
+home/lock screen wallpaper to an image from a folder you choose, based on which Wi-Fi network
+you're connected to and whether your foldable device is folded or unfolded. This policy
+explains what information the App accesses and how it is used.</p>
+
+<h2>1. The App does not send any data to a server</h2>
+<p>The App works entirely offline. It has no backend server, no analytics SDK, and no
+advertising SDK. All data the App handles is stored only on your device and is never
+transmitted anywhere. Nobody, including the developer, can remotely collect, view, sell, or
+share your data.</p>
+
+<h2>2. Information the App accesses on your device</h2>
+<table>
+<tr><th>Permission / data</th><th>Purpose</th><th>Leaves the device?</th></tr>
+<tr>
+  <td>Location permissions<br/>(<code>ACCESS_FINE_LOCATION</code>,
+  <code>ACCESS_BACKGROUND_LOCATION</code>,<br/><code>NEARBY_WIFI_DEVICES</code>)</td>
+  <td>Android requires a location permission in order to read the SSID (network name) of the
+  currently connected Wi-Fi. The App <b>does not look up, store, or transmit your actual
+  location (e.g. GPS coordinates)</b> — it uses this permission solely to determine which of
+  your saved Wi-Fi profiles, if any, matches the current connection. Background location
+  access is needed so the App can detect Wi-Fi changes and switch the wallpaper automatically
+  even while it isn't open on screen, which is the App's core purpose.</td>
+  <td>No (used only for an in-memory SSID string comparison; not stored)</td>
+</tr>
+<tr>
+  <td>Photo/image folder access<br/>(Storage Access Framework, <code>SET_WALLPAPER</code>)</td>
+  <td>Reads image files from folders you explicitly pick to set them as wallpaper. The App
+  never accesses folders or files you haven't chosen.</td>
+  <td>No (processed on-device and passed directly to the wallpaper API)</td>
+</tr>
+<tr>
+  <td>Wi-Fi profile list (SSIDs), folder paths, cycle settings, event log, excluded-image list</td>
+  <td>Stored on-device to power the App's core feature (auto-switching wallpapers by
+  SSID/fold state).</td>
+  <td>No (local storage only)</td>
+</tr>
+<tr>
+  <td>Exact alarm permission (<code>SCHEDULE_EXACT_ALARM</code>), battery optimization exemption</td>
+  <td>Used for system-level scheduling so Wi-Fi/fold changes are detected promptly even in
+  the background. Unrelated to personal data.</td>
+  <td>N/A</td>
+</tr>
+</table>
+
+<h2>3. Data retention and deletion</h2>
+<p>All data described above is kept only in the App's private storage on your device.
+Uninstalling the App deletes this data as well. The event log and excluded-image list can be
+cleared or restored directly from within the App.</p>
+
+<h2>4. Third-party sharing</h2>
+<p>The App does not provide, sell, or share any data with third parties, and includes no
+advertising or tracking SDKs.</p>
+
+<h2>5. Children</h2>
+<p>The App is not directed at children and does not knowingly collect personal information
+from children.</p>
+
+<h2>6. Contact</h2>
+<p>For questions about this privacy policy, contact:</p>
+<p><a href="mailto:codejin2@gmail.com">codejin2@gmail.com</a></p>
+</div>
+
+</body>
+</html>
